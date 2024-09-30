@@ -3,8 +3,7 @@
 import { Request, Response } from "express";
 import errorCatching from "../../function/errorCatching";
 import GlobalLog from "../../class/GlobalLog.class";
-
-const testRouteLog = new GlobalLog("testRoute");
+import testRouteLog from "./log";
 
 const GET = errorCatching((req: Request, res: Response) => {
   testRouteLog.Log("get request found !!", "log");
