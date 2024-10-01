@@ -13,7 +13,13 @@ const PORT = 3000;
 const appLog = new GlobalLog("app-status");
 
 app.use(express.json());
-app.use(fileupload());
+app.use(
+  fileupload({
+    limits: { fileSize: 10 * 1024 * 1024 },
+    useTempFiles: true,
+    tempFileDir: "/tmp/",
+  })
+);
 
 app.get("/", (req: Request, res: Response) => {
   res.status(200).json({
