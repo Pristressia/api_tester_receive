@@ -1,0 +1,90 @@
+{
+  "rowid": "0",
+  "document_code": "",
+  "customer_type": "1",
+  "customer_rowid": 1450,
+  "customer_code": "01150425",
+  "purchase_from_rowid": 2100000,
+  "purchase_from_code": "1000121",
+  "total_amount": 3298098,
+  "file_attach_1": "2024-09-168643_85658568.jpg",
+  "file_attach_2": "bodyContent_85658611.txt",
+  "file_attach_3": "",
+  "remark": "",
+  "active_status": "10",
+  "user_id": 125,
+  "user_code": "wisit.o",
+  "user_ip": "0.0.0.0",
+  "item_list": [
+    {
+      "product_rowid": 806,
+      "promotion_rowid": 0,
+      "outlet_rowid": 0,
+      "volumn": "112",
+      "invoice_no": "",
+      "invoice_date": "07-10-2024",
+      "suggest_price_nop": 590,
+      "amount": 66080
+    },
+    {
+      "product_rowid": 805,
+      "promotion_rowid": 0,
+      "outlet_rowid": 0,
+      "volumn": "1121",
+      "invoice_no": "",
+      "invoice_date": "08-10-2024",
+      "suggest_price_nop": 590,
+      "amount": 661390
+    },
+    {
+      "product_rowid": 804,
+      "promotion_rowid": 0,
+      "outlet_rowid": 0,
+      "volumn": "1122",
+      "invoice_no": "",
+      "invoice_date": "09-10-2024",
+      "suggest_price_nop": 590,
+      "amount": 661980
+    },
+    {
+      "product_rowid": 803,
+      "promotion_rowid": 0,
+      "outlet_rowid": 0,
+      "volumn": "1123",
+      "invoice_no": "",
+      "invoice_date": "10-10-2024",
+      "suggest_price_nop": 550,
+      "amount": 617650
+    },
+    {
+      "product_rowid": 801,
+      "promotion_rowid": 0,
+      "outlet_rowid": 0,
+      "volumn": "1124",
+      "invoice_no": "",
+      "invoice_date": "11-10-2024",
+      "suggest_price_nop": 550,
+      "amount": 618200
+    },
+    {
+      "product_rowid": 800,
+      "promotion_rowid": 0,
+      "outlet_rowid": 0,
+      "volumn": "1125",
+      "invoice_no": "",
+      "invoice_date": "12-10-2024",
+      "suggest_price_nop": 550,
+      "amount": 618750
+    },
+    {
+      "product_rowid": 799,
+      "promotion_rowid": 0,
+      "outlet_rowid": 0,
+      "volumn": "1126",
+      "invoice_no": "",
+      "invoice_date": "13-10-2024",
+      "suggest_price_nop": 48,
+      "amount": 54048
+    }
+  ]
+}

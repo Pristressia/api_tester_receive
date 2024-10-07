@@ -12,14 +12,16 @@ interface BodyReceive_forTestRoute_upload {
 
 const POST = errorCatching(
   (req: Request, res: Response, next: NextFunction) => {
+    console.log(req.files);
+    console.log(req.body);
+
     if (!req.files || !req.files.file) {
       throw new Error("No file have been upload");
     }
 
     // from body input name "file"
     const uploadedFile = req.files.file as fileUpload.UploadedFile;
-    const testText_receive = (req.body as BodyReceive_forTestRoute_upload)
-      ?.testText;
+    const { testText }: BodyReceive_forTestRoute_upload = req.body;
 
     uploadFileHandle(uploadedFile);
 
@@ -31,7 +33,7 @@ const POST = errorCatching(
     res.status(200).json({
       status: "ok",
       message: `seem like you upload ${uploadedFile.name} completed !!!`,
-      message2: `and I got testText message from you ${testText_receive}`,
+      message2: `and I got testText message from you ${testText}`,
     });
   },
   GL

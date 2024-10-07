@@ -4,6 +4,7 @@ import fileupload from "express-fileupload";
 
 //#region import router
 import testRoute from "./routes/testRoute/route";
+import nopDummy from "./routes/nopDummy/route";
 
 //#endregion
 
@@ -29,6 +30,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use("/testroute", testRoute);
+app.use("/nopdummy", nopDummy);
 
 app.listen(PORT, () => {
   console.info(`[app-status] : now app is listen @port : ${3000}`);
