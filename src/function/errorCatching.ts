@@ -17,6 +17,7 @@ export default function errorCatching(
       requestFunc(req, res, next);
     } catch (e) {
       globalLog.Log(`[error] - ${(e as Error).message}`, "error");
+      console.error(e);
       res.status(400).json({
         status: "Error",
         message: (e as Error).message,

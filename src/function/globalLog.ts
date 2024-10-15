@@ -1,5 +1,5 @@
 export default function globalLog(
-  log: string,
+  log: any,
   type: "log" | "info" | "error" | "warn"
 ): void {
   switch (type) {

@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
-import Log from "./log";
+import log from "./log";
+import errorCatching from "../../../function/errorCatching";
 
 interface ItemList {
   product_rowid: number;
@@ -32,7 +33,9 @@ interface ActualSelloutInput {
   item_list?: ItemList[];
 }
 
-function POST(req: Request, res: Response) {
+const Log = log.Log;
+
+const POST = errorCatching((req: Request, res: Response) => {
   const {
     rowid,
     document_code,
@@ -57,6 +60,7 @@ function POST(req: Request, res: Response) {
   Log(`rowid: ${rowid}`);
   Log(`document_code: ${document_code}`);
   Log(`customer_type: ${customer_type}`);
+  Log(`customer_rowid: ${customer_rowid}`);
   Log(`customer_code: ${customer_code}`);
   Log(`purchase_from_rowid: ${purchase_from_rowid}`);
   Log(`purchase_from_code: ${purchase_from_code}`);
@@ -64,6 +68,20 @@ function POST(req: Request, res: Response) {
   Log(`file_attach: ${file_attach_1} ${file_attach_2} ${file_attach_3}`);
   Log(`remark: ${remark}`);
   Log(`active_status: ${active_status}`);
-}
+  Log(`user_id: ${user_id}`);
+  Log(`user_code: ${user_code}`);
+  Log(`user_ip: ${user_ip}`);
+
+  if (item_list) {
+    for (const item of item_list) {
+      Log(item);
+    }
+  }
+
+  res.status(200).json({
+    status: "ok",
+    message: "received data completed",
+  });
+}, log);
 
 export default POST;

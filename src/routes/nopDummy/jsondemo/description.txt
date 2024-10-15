@@ -1,0 +1,5 @@
+https://app.siamwinery.com/nop/api/customer-group/all-group-info
+https://app.siamwinery.com/nop/api/product/search
+https://app.siamwinery.com/nop/api/promotion/all-item-info-by-user/125
+https://app.siamwinery.com/nop/api/customer/search-by-authorize
+https://app.siamwinery.com/nop/api/customer/search-purchase-from

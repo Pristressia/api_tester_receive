@@ -1,0 +1,12 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": [
+    {
+      "rowid": 5400000,
+      "customer_code": "1000155",
+      "value": 5400000,
+      "label": "1000155 : Udonsangchareon Co.,Ltd. [ บจก.อุดรแสงเจริญ (2001) ]"
+    }
+  ]
+}

@@ -10,7 +10,7 @@ export default class GlobalLog {
     this.header = header;
   }
 
-  Log(textLog: string | null, typeLog: ConsoleType = "log") {
+  Log(textLog: any | null, typeLog: ConsoleType = "log") {
     const now = new Date(Date.now());
     globalLog(`${now.toString()} | [${this.header}] : ${textLog}`, typeLog);
   }
