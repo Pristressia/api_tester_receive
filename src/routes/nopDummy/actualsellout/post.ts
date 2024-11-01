@@ -33,9 +33,12 @@ interface ActualSelloutInput {
   item_list?: ItemList[];
 }
 
-const Log = log.Log;
+const Log = (text: any) => log.Log(text);
 
 const POST = errorCatching((req: Request, res: Response) => {
+  Log("post received");
+  // console.log(req.body);
+
   const {
     rowid,
     document_code,
@@ -73,9 +76,10 @@ const POST = errorCatching((req: Request, res: Response) => {
   Log(`user_ip: ${user_ip}`);
 
   if (item_list) {
-    for (const item of item_list) {
-      Log(item);
-    }
+    // for (const item of item_list) {
+    //   Log(item);
+    // }
+    console.table(item_list);
   }
 
   res.status(200).json({
